@@ -1,0 +1,174 @@
+{
+  "$comment": "Inventario extraído de RECURSOS/ (PDF de Desayunos y Marino Azul). Precios en pesos MXN tal como aparecen en el menú (IVA incluido). price=null significa pendiente de revisión. No editar a mano sin revisar el PDF original; regenerar seed.sql con `npm run seed:build`.",
+  "menus": [
+    {
+      "slug": "desayunos",
+      "name": "Desayunos",
+      "description": "Menú de desayunos 2026",
+      "source_file": "Menú CA Desayunos 2026 - Menu V1.pdf",
+      "sort": 1,
+      "categories": [
+        {
+          "name": "Desayunos",
+          "items": [
+            { "slug": "waffles", "name": "Waffles", "unit": "platillo", "kind": "food", "variants": [
+              { "label": "Compota de frutas y queso brie", "description": "Compota de frutas frescas de temporada, queso brie, queso crema batido y crunch de cereal.", "price": 210 },
+              { "label": "Tocino caramelizado y queso de cabra", "description": "Tocino caramelizado, aguacate, queso de cabra y miel de abeja con chile quebrado.", "price": 230 },
+              { "label": "Frutas y crema de cacahuate", "description": "Frutas frescas de temporada, crema de cacahuate casera, queso crema batido y semillas de hemp.", "price": 190 }
+            ] },
+            { "slug": "omelette-de-vegetales", "name": "Omelette de Vegetales", "unit": "platillo", "kind": "food", "price": 235, "description": "Relleno de vegetales salteados en aceite de curry, cubiertos en crema de tres quesos. Acompañado de ensalada de mini pimientos dulces y tomates cherry salteados en aceite de oliva." },
+            { "slug": "huevos-hashbrowns", "name": "Huevos & Hashbrowns", "unit": "platillo", "kind": "food", "price": 230, "description": "Dos huevos estrellados sobre hashbrowns fritos con aceite de curry y cebolla, acompañados de una rebanada de pan sourdough y jocoque para untar." },
+            { "slug": "hummus-toast", "name": "Hummus Toast", "unit": "platillo", "kind": "food", "price": 265, "description": "Dos huevos pochados sobre sourdough con hummus de betabel, queso cotija, aguacate y salsa macha. Acompañado de ensalada de mini pimientos dulces y tomates cherry salteados." },
+            { "slug": "pan-frances", "name": "Pan Francés", "unit": "platillo", "kind": "food", "price": 250, "description": "Pan brioche casero con compota de frutos de temporada y crema batida, acompañado de miel de maple. Puedes elegir entre el clásico brioche de mantequilla o el brioche de chocolate." },
+            { "slug": "beet-pancakes", "name": "Beet Pancakes", "unit": "platillo", "kind": "food", "price": 220, "description": "Betabel, leche de almendras, aceite de coco, avena, banana, acompañado de fruta fresca y peanut butter hecha en casa." },
+            { "slug": "chilaquiles", "name": "Chilaquiles", "unit": "platillo", "kind": "food", "price": 250, "description": "Poblanos, Rojos o Verdes con frijoles, crema, aguacate, cilantro, queso y dos huevos estrellados." },
+            { "slug": "huevos-montados", "name": "Huevos Montados", "unit": "platillo", "kind": "food", "price": 265, "description": "Dos huevos pochados sobre tortilla de maíz frita con frijoles, machaca, chile poblano, panela, salsa asada y aguacate." },
+            { "slug": "especial-sinaloenses", "name": "Especial Sinaloenses", "unit": "platillo", "kind": "food", "price": 340, "description": "Huevos en torta, tamal de elote con queso crema del chef, bañado en salsa de frijol, chilorio de la casa, salsa verde y queso rancho." },
+            { "slug": "combinacion-sonorense", "name": "Combinación Sonorense", "unit": "platillo", "kind": "food", "price": 340, "description": "Machaca a la mexicana, huevo al gusto, tamal bañado en salsa poblana, chilaquiles y frijoles refritos." },
+            { "slug": "combinacion-sinaloense", "name": "Combinación Sinaloense", "unit": "platillo", "kind": "food", "price": 340, "description": "Chilorio con verdura, huevo al gusto, tamal bañado en salsa poblana, chilaquiles y frijoles refritos." },
+            { "slug": "combinacion-regia", "name": "Combinación Regia", "unit": "platillo", "kind": "food", "price": 340, "description": "Filete de sirloin, huevo al gusto, tamal bañado en salsa poblana, chilaquiles y frijoles refritos." },
+            { "slug": "omelette-de-camaron", "name": "Omelette de Camarón", "unit": "platillo", "kind": "food", "price": 285, "description": "Omelette relleno de camarón ranchero y queso acompañado de chilaquiles y frijoles." },
+            { "slug": "hot-cakes-de-la-casa", "name": "Hot Cakes de la Casa", "unit": "platillo", "kind": "food", "price": 225, "description": "Hot cakes tradicionales acompañados de fruta fresca y miel de maple." },
+            { "slug": "avocado-toast", "name": "Avocado Toast", "unit": "platillo", "kind": "food", "price": 265, "description": "Pan artesanal tostado con aguacate fresco, jamón serrano, huevo, parmesano, arúgula y pimientos baby." }
+          ]
+        },
+        {
+          "name": "Extras",
+          "items": [
+            { "slug": "tocino-con-caramelo", "name": "Orden de tocino con caramelo", "unit": "orden (3 pzas)", "kind": "extra", "price": 65 },
+            { "slug": "papas-campesinas", "name": "Papas campesinas", "unit": "orden", "kind": "extra", "price": 75, "menu_label": "Orden de papas campesinas" },
+            { "slug": "plato-de-frutas", "name": "Orden de plato de frutas", "unit": "orden", "kind": "extra", "price": 75 }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "marino-azul",
+      "name": "Marino Azul",
+      "description": "Menú Marino Azul: entradas, platos fuertes, postres y bebidas",
+      "source_file": "Casa Aduana — Menú Marino Azul VF 1.pdf",
+      "sort": 2,
+      "categories": [
+        {
+          "name": "Para compartir",
+          "items": [
+            { "slug": "focaccia-artesanal", "name": "Focaccia Artesanal", "unit": "platillo", "kind": "food", "price": 149, "description": "Pan italiano horneado con aceite de oliva extra virgen, romero fresco, tomate deshidratado y sal de mar." },
+            { "slug": "guacamole", "name": "Guacamole", "unit": "platillo", "kind": "food", "price": 175, "description": "Servido con pico de gallo, tostadas y cebolla cambray." },
+            { "slug": "coliflor-asada", "name": "Coliflor Asada", "unit": "platillo", "kind": "food", "price": 190, "description": "Crema de poro y coliflor, acompañada de alioli." }
+          ]
+        },
+        {
+          "name": "Entradas frescas",
+          "items": [
+            { "slug": "ensalada-ejotes-mandarina-mango", "name": "Ensalada de ejotes, mandarina y mango", "unit": "platillo", "kind": "food", "price": 245, "description": "Ejotes, mandarina, mango, mix de lechuga orgánica, queso feta, nuez, vinagreta de miel y mostaza." },
+            { "slug": "ensalada-betabel-duraznos", "name": "Ensalada de betabel y duraznos", "unit": "platillo", "kind": "food", "price": 285, "description": "Betabel rostizado, duraznos, mix de lechuga orgánica, jocoque, queso de cabra, nuez caramelizada y vinagreta Thai de mango." },
+            { "slug": "ensalada-cesar-casa-aduana", "name": "Ensalada César Casa Aduana", "unit": "platillo", "kind": "food", "price": 275, "description": "Corazón de lechuga romana, pechuga de pollo, crotones de la casa, queso parmesano y aderezo César de la casa." },
+            { "slug": "ceviche-de-sierra", "name": "Ceviche de sierra", "unit": "platillo", "kind": "food", "price": 275, "description": "Sierra 180 gr, limón, cebolla morada, aguacate, salsa negra de la casa y poro frito." },
+            { "slug": "ceviche-de-camaron", "name": "Ceviche de camarón", "unit": "platillo", "kind": "food", "price": 295, "description": "Camarón 180 gr, limón, cebolla morada y aguacate." },
+            { "slug": "chicharron-de-pescado", "name": "Chicharrón de pescado", "unit": "platillo", "kind": "food", "price": 290, "description": "Pesca del día 180 gr, mayonesa de chipotle, guacamole, salsa de habanero tatemado." },
+            { "slug": "tostada-tropical", "name": "Tostada tropical", "unit": "orden (2 pzas)", "kind": "food", "price": 265, "description": "Pescado del día 120 gr, aguacate, mango, salsa de soya y limón (2 pzas)." }
+          ]
+        },
+        {
+          "name": "Platos fuertes",
+          "items": [
+            { "slug": "hamburguesa-prime-aduana", "name": "Hamburguesa Prime Aduana", "unit": "platillo", "kind": "food", "price": 320, "description": "Prime Beef 200 gr, pan de la casa, tocino, cebolla confitada, alioli de pepinillo y papas waffle." },
+            { "slug": "tacos-de-rib-eye", "name": "Tacos de Rib Eye", "unit": "orden (2 pzas)", "kind": "food", "price": 260, "description": "Rib eye 180 gr, tortilla azul hecha a mano, costra de queso, guacamole y salsa tatemada (2 pzas)." },
+            { "slug": "tacos-de-pork-belly", "name": "Tacos de Pork Belly", "unit": "orden (3 pzas)", "kind": "food", "price": 240, "description": "Pork belly, tortilla azul hecha a mano, coleslaw y guacamole (3 pzas)." },
+            { "slug": "sandwich-jamon-ahumado", "name": "Sándwich de jamón ahumado", "unit": "platillo", "kind": "food", "price": 275, "description": "Jamón ahumado 150 gr, baguette de la casa, tocino, cebolla confitada y papas waffle." },
+            { "slug": "albondigas-de-camaron", "name": "Albóndigas de camarón", "unit": "platillo", "kind": "food", "price": 295, "description": "Servidas en caldo de chimole, acompañadas de arroz y tortillas hechas a mano." },
+            { "slug": "camarones-empanizados", "name": "Camarones empanizados", "unit": "orden (6 pzas)", "kind": "food", "price": 320, "description": "Camarón, panko, salsa de mango habanero y ensalada mixta orgánica (6 pzas)." },
+            { "slug": "rib-eye", "name": "Rib Eye", "unit": "platillo", "kind": "food", "price": 590, "description": "Rib eye 350 gr. Acompañado de 2 guarniciones." },
+            { "slug": "pulpo-zarandeado", "name": "Pulpo zarandeado", "unit": "platillo", "kind": "food", "price": 425, "description": "Pulpo 250 gr, adobo de la casa, crema de pesto, papas campesinas y focaccia." },
+            { "slug": "pasta-linguini-a-la-diabla", "name": "Pasta Linguini a la diabla", "unit": "platillo", "kind": "food", "price": 450, "description": "Camarones, pulpo, crema de chimole picante, queso parmesano y focaccia." },
+            { "slug": "paella-casa-aduana", "name": "Paella Casa Aduana", "unit": "platillo", "kind": "food", "price": 420, "description": "Paella con mariscos, pollo y chorizo ibérico." }
+          ]
+        },
+        {
+          "name": "Guarniciones",
+          "items": [
+            { "slug": "pure-de-papa", "name": "Puré de papa", "unit": "orden", "kind": "extra", "price": 75 },
+            { "slug": "papas-campesinas", "name": "Papas campesinas", "unit": "orden", "kind": "extra", "price": 75, "menu_label": "Papa campesina" },
+            { "slug": "mac-and-cheese", "name": "Mac and cheese", "unit": "orden", "kind": "extra", "price": 75 },
+            { "slug": "vegetales-salteados", "name": "Vegetales salteados", "unit": "orden", "kind": "extra", "price": 75 },
+            { "slug": "papa-al-horno", "name": "Papa al horno", "unit": "orden", "kind": "extra", "price": 75 },
+            { "slug": "mix-chile-guero-cebolla-pimientos", "name": "Mix de chile güero, cebolla cambray y mini pimientos", "unit": "orden", "kind": "extra", "price": 75 },
+            { "slug": "zanahoria-confitada", "name": "Zanahoria confitada", "unit": "orden", "kind": "extra", "price": 75 }
+          ]
+        },
+        {
+          "name": "Postres",
+          "items": [
+            { "slug": "tartara-de-frutas", "name": "Tártara de frutas", "unit": "postre", "kind": "food", "price": 160, "description": "Fruta de temporada y crema pastelera." },
+            { "slug": "el-tesoro-de-la-aduana", "name": "El Tesoro de la Aduana", "unit": "postre", "kind": "food", "price": 175, "description": "Galleta de choco chips, helado de mazapán." },
+            { "slug": "pay-de-limon", "name": "Pay de limón", "unit": "postre", "kind": "food", "price": 170, "description": "Base de galleta con crema de limón fresco y merengue quemado." },
+            { "slug": "pera-pochada", "name": "Pera Pochada", "unit": "postre", "kind": "food", "price": 195, "description": "Pera pochada en vino tinto con galleta de pistacho." }
+          ]
+        },
+        {
+          "name": "Mixología de la casa",
+          "items": [
+            { "slug": "coctel-la-aduana", "name": "La Aduana", "unit": "bebida", "kind": "drink", "price": 185, "description": "Mezcal Espadín, Ancho Reyes, piña, limón y miel de agave. Ahumado, tropical y ligeramente picante." },
+            { "slug": "topolobampo-sunset", "name": "Topolobampo Sunset", "unit": "bebida", "kind": "drink", "price": 180, "description": "Tequila reposado, Aperol, naranja fresca, limón y agua mineral. Refrescante, cítrico y ligeramente amargo." },
+            { "slug": "tierra-y-mango", "name": "Tierra y Mango", "unit": "bebida", "kind": "drink", "price": 175, "description": "Mezcal, mango y limón, servido con escarcha de Tajín. Dulce, tropical y con un delicado toque ahumado." },
+            { "slug": "pasion-mezcalera", "name": "Pasión Mezcalera", "unit": "bebida", "kind": "drink", "price": 175, "description": "Mezcal, maracuyá, limón y miel de agave. Exótico, vibrante y con el equilibrio perfecto entre acidez y dulzor." },
+            { "slug": "agua-mala", "name": "Agua Mala", "unit": "bebida", "kind": "drink", "price": 185, "description": "Tequila reposado, jamaica, limón y miel de agave, terminado con romero ahumado. Floral, cítrico y ligeramente ahumado." },
+            { "slug": "citrico-del-puerto", "name": "Cítrico del Puerto", "unit": "bebida", "kind": "drink", "price": 175, "description": "Vodka, licor de naranja, toronja, limón y agua mineral. Ligero, cítrico y refrescante." },
+            { "slug": "marea-negra", "name": "Marea Negra", "unit": "bebida", "kind": "drink", "price": 190, "description": "Mezcal, cold brew, licor de café y licor de cacao. Intenso, elegante y ahumado." },
+            { "slug": "gin-de-los-mochis", "name": "Gin de Los Mochis", "unit": "bebida", "kind": "drink", "price": 175, "description": "Gin, pepino fresco, limón, agua tónica y romero. Ligero, herbal y muy refrescante." },
+            { "slug": "carajillo-de-coco", "name": "Carajillo de Coco", "unit": "bebida", "kind": "drink", "price": 185, "description": "Licor 43, espresso y crema de coco, terminado con coco tostado. Cremoso, dulce y perfecto para la sobremesa." },
+            { "slug": "guanabana-spritz", "name": "Guanábana Spritz", "unit": "bebida", "kind": "drink", "price": 190, "description": "Tequila blanco, guanábana, limón, Prosecco y agua mineral. Tropical, fresco y delicadamente burbujeante." }
+          ]
+        },
+        {
+          "name": "Coctelería clásica",
+          "items": [
+            { "slug": "gin-tonic", "name": "Gin Tonic", "unit": "bebida", "kind": "drink", "price": 175 },
+            { "slug": "margarita", "name": "Margarita", "unit": "bebida", "kind": "drink", "price": 150 },
+            { "slug": "mezcalita-de-jamaica", "name": "Mezcalita de Jamaica", "unit": "bebida", "kind": "drink", "price": 165 },
+            { "slug": "mezcalindo", "name": "Mezcalindo", "unit": "bebida", "kind": "drink", "price": 165 },
+            { "slug": "mezcalita-de-maracuya", "name": "Mezcalita de Maracuyá", "unit": "bebida", "kind": "drink", "price": 175 },
+            { "slug": "carajillo", "name": "Carajillo", "unit": "bebida", "kind": "drink", "price": 170 },
+            { "slug": "hugo-spritz", "name": "Hugo Spritz", "unit": "bebida", "kind": "drink", "price": 200 },
+            { "slug": "mimosa", "name": "Mimosa", "unit": "bebida", "kind": "drink", "price": 100 }
+          ]
+        },
+        {
+          "name": "Bebidas",
+          "items": [
+            { "slug": "limonada", "name": "Limonada", "unit": "bebida", "kind": "drink", "price": 90, "description": "Natural, fresa o maracuyá." },
+            { "slug": "refresco", "name": "Refresco", "unit": "bebida", "kind": "drink", "price": 40 }
+          ]
+        },
+        {
+          "name": "Cervezas",
+          "items": [
+            { "slug": "cerveza-pacifico", "name": "Pacífico", "unit": "cerveza", "kind": "drink", "price": 55 },
+            { "slug": "cerveza-corona-extra", "name": "Corona Extra", "unit": "cerveza", "kind": "drink", "price": 55 },
+            { "slug": "cerveza-modelo-especial", "name": "Modelo Especial", "unit": "cerveza", "kind": "drink", "price": 60 },
+            { "slug": "cerveza-negra-modelo", "name": "Negra Modelo", "unit": "cerveza", "kind": "drink", "price": 65 },
+            { "slug": "preparacion-chelada", "name": "Chelada (preparación)", "unit": "preparación", "kind": "modifier", "price": 15, "description": "Limón, sal y cerveza de tu elección. El costo de la preparación se agrega al precio de la cerveza seleccionada." },
+            { "slug": "preparacion-michelada", "name": "Michelada (preparación)", "unit": "preparación", "kind": "modifier", "price": 30, "description": "Clamato, limón, salsas de la casa y escarcha de Tajín. El costo de la preparación se agrega al precio de la cerveza seleccionada." },
+            { "slug": "preparacion-cubana", "name": "Cubana (preparación)", "unit": "preparación", "kind": "modifier", "price": 25, "description": "Limón, salsa inglesa, Maggi, salsa picante y escarcha de sal. El costo de la preparación se agrega al precio de la cerveza seleccionada." }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "servicios",
+      "name": "Servicios para eventos",
+      "description": "Conceptos de renta y servicios. Los precios no vienen en los recursos: completar antes de cotizar.",
+      "source_file": "casadelaaduana.com/eventos",
+      "sort": 3,
+      "categories": [
+        {
+          "name": "Renta de espacios",
+          "items": [
+            { "slug": "renta-terraza-6-horas", "name": "Renta de terraza (6 horas)", "unit": "evento", "kind": "service", "price": null, "needs_review": "Precio no disponible en los recursos. El sitio indica que la renta de la terraza es por 6 horas." },
+            { "slug": "hora-extra-terraza", "name": "Hora extra de terraza", "unit": "hora", "kind": "service", "price": null, "needs_review": "Precio no disponible en los recursos. El sitio indica que se puede pagar hora extra." }
+          ]
+        }
+      ]
+    }
+  ]
+}
