@@ -23,18 +23,43 @@ if (!url || !key) {
   process.exit(1);
 }
 
+/** Lee la contraseña en modo raw: no se muestra en pantalla (también en PowerShell). */
 function askHidden(question: string): Promise<string> {
-  return new Promise((resolve) => {
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout, terminal: true });
-    const out = rl as unknown as { _writeToOutput: (s: string) => void; output: NodeJS.WriteStream };
-    out._writeToOutput = (s: string) => {
-      if (s.includes(question)) out.output.write(s);
-    };
-    rl.question(question, (answer) => {
-      rl.close();
-      process.stdout.write("\n");
-      resolve(answer);
+  const stdin = process.stdin;
+  if (!stdin.isTTY) {
+    // Entrada redirigida: se lee una línea sin eco.
+    return new Promise((resolve) => {
+      const rl = readline.createInterface({ input: stdin });
+      rl.once("line", (line) => {
+        rl.close();
+        resolve(line);
+      });
     });
+  }
+  return new Promise((resolve, reject) => {
+    process.stdout.write(question);
+    let value = "";
+    stdin.setRawMode(true);
+    stdin.resume();
+    stdin.setEncoding("utf8");
+    const onData = (chunk: string) => {
+      for (const ch of chunk) {
+        if (ch === "\r" || ch === "\n") {
+          stdin.setRawMode(false);
+          stdin.pause();
+          stdin.off("data", onData);
+          process.stdout.write("\n");
+          return resolve(value);
+        }
+        if (ch === "\u0003") {
+          stdin.setRawMode(false);
+          return reject(new Error("Cancelado"));
+        }
+        if (ch === "\u0008" || ch === "\u007f") value = value.slice(0, -1);
+        else value += ch;
+      }
+    };
+    stdin.on("data", onData);
   });
 }
 
