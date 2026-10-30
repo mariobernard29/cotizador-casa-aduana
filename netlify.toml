@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Las variables NEXT_PUBLIC_* son públicas por diseño (Next.js las incluye en el código
+  # del navegador). SUPABASE_SECRET_KEY sigue sujeta al escaneo de secretos.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,NEXT_PUBLIC_APP_TIMEZONE"
